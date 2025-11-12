@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sex {
+            display: flex;
+            justify-content: space-between;
+            align-items:   center;
+        }
+        .r-s{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .fn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 20vw;
+        }
+
+        input {
+            height: 20px;
+        }
+        .ln{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fn">
+        <p>First Name:</p>
+        <input type="text" placeholder="First name">
+    </div>
+    <div class="fn ln">
+        <p>Last Name:</p>
+        <input type="text" placeholder="Last name">
+    </div>
+    <div class="fn pass">
+        <p>Password:</p>
+        <input type="password" placeholder="Password">
+    </div>
+    <div class="fn email">
+        <p>Email:</p>
+        <input type="email" placeholder="Email">
+    </div>
+    <div class="fn num">
+        <p>Ph no:</p>
+        <button>🇮🇳+91</button>
+        <input type="number" placeholder="Number">
+    </div>
+    <div class="fn" id="sex">
+        <p>Sex:</p>
+        <div class="r-s">
+            <input type="radio" value="Male" name="male">
+            <label for="male">Male</label>
+            <input type="radio" value="Female" name="female">
+            <label for="female">Female</label>
+        </div>
+    </div>
+    <div class="fn dob">
+        <p>Date of birth:</p>
+        <input type="date" placeholder="Number">
+    </div>
+    <div class="fn lang">
+        <p>Language:</p>
+        <div class="ln">
+            <input type="checkbox" name="English">
+            <label for="English">English</label>
+            <input type="checkbox" name="Hindi">
+            <label for="Hindi">Hindi</label>
+            <input type="checkbox" name="Tamil">
+            <label for="Tamil">Tamil</label>
+            <input type="checkbox" name="Telugu">
+            <label for="Telugu">Telegu</label>
+            <input type="checkbox" name="Punjabi">
+            <label for="Punjabi">Punjabi</label>
+        </div>
+    </div>
+    <div class="fn add">
+        <p>Address:</p>
+        <input type="text" placeholder="Address">
+    </div>
+</body>
+
+</html>
