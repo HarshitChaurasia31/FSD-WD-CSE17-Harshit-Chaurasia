@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Styling Example</title>
+
+  <style>
+    /* 🎨 Background image for the whole page */
+    body {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 🏷️ Header style */
+    h1 {
+      font-family: 'Georgia', serif;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      text-shadow: 2px 2px 4px black;
+      display: inline-block;
+      margin-top: 40px;
+    }
+
+    /* 📜 Paragraph style */
+    p {
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #222;
+      font-size: 18px;
+      line-height: 1.6;
+      width: 60%;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 🖼️ Section with its own background image */
+    .highlight {
+      background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      font-weight: bold;
+      font-style: italic;
+      padding: 40px;
+      margin: 30px auto;
+      width: 60%;
+      border-radius: 10px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    /* 🔘 Button with hover effect */
+    .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-family: 'Verdana', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to My Styled Web Page 🌈</h1>
+
+  <p>
+    This web page demonstrates how to use <b>CSS (Cascading Style Sheets)</b> to control fonts, colors,
+    and background images. CSS helps you separate style from content, making web pages look beautiful
+    and consistent.
+  </p>
+
+  <div class="highlight">
+    This section has its own background image and different text styling.
+    You can use CSS to make elements stand out by applying custom styles and background effects.
+  </div>
+
+  <button class="btn">Learn More</button>
+</body>
+</html>

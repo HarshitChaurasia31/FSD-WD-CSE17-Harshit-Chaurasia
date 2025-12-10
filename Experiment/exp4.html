@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABES - Cart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Grid+Double:wght@100..900&family=Mozilla+Headline:wght@200..700&family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .top {
+            background-color: rgb(41, 41, 41);
+            height: 100px;
+            display: flex;
+            color: white;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 350px;
+        }
+
+        .logo img {
+            width: 15.5rem;
+            padding: 6px;
+            height: 5.5rem;
+            object-fit: contain;
+        }
+
+        .webname {
+            padding: 20px;
+            font-size: 24px;
+            font-family: "Ancizar Sans", sans-serif;
+        }
+
+        .navigation {
+            background-color: grey;
+            height: 40px;
+        }
+
+        .sec ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            align-content: center;
+            padding: 10px 35px;
+        }
+
+        .sec ul li {
+            color: rgb(250, 250, 250);
+        }
+
+        .sec ul li a {
+            color: rgb(250, 250, 250);
+            text-decoration: none;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            height: calc(100vh - 140px);
+        }
+
+        .deparment {
+            background-color: gainsboro;
+            width: 200px;
+            height: 100%;
+            padding: 15px 0px 0 40px;
+            font-size: 18px;
+            overflow-y: auto;
+        }
+
+        .deparment ul li {
+            padding: 10px 10px 10px 2px;
+        }
+
+        .cart {
+            padding: 20px 40px;
+            overflow-y: auto;
+        }
+
+        .cart h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .books-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            list-style: none;
+        }
+
+        .b1 {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: flex-start;
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .b1 img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .explain {
+            flex: 1;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .remove {
+            width: 90px;
+            height: 40px;
+            border: none;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            align-self: center;
+        }
+
+        .remove:hover {
+            background-color: #b02a37;
+        }
+
+        .checkout {
+            margin-top: 25px;
+            text-align: right;
+        }
+
+        .checkout button {
+            background-color: #4e73df;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .checkout button:hover {
+            background-color: #2e59d9;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top">
+        <div class="logo">
+            <img src="https://www.abes.ac.in/assets/Logo.png" alt="Abes logo">
+        </div>
+        <div class="webname">
+            <h2>ABES Engineering College</h2>
+        </div>
+    </nav>
+
+    <nav class="navigation">
+        <div class="sec">
+            <ul>
+                <li><a href="exp1.html">Home</a></li>
+                <li><a href="exp2.html">Login</a></li>
+                <li>Registration</li>
+                <li><a href="exp3.html">Catalogue</a></li>
+                <li>Cart</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="deparment">
+            <ul>
+                <li>CSE</li>
+                <li>ECE</li>
+                <li>EEE</li>
+                <li>CIVIL</li>
+                <li>MECHANICAL</li>
+            </ul>
+        </div>
+
+        <div class="cart">
+            <h1>Your Cart</h1>
+            <ul class="books-list">
+                <li>
+                    <div class="b1">
+                        <img src="book/find.jpg" alt="">
+                        <p class="explain">
+                            <strong>How to Find Yourself</strong><br>
+                            This book helps readers discover their true identity and purpose through self-reflection and mindfulness.
+                            <div class="price">Price: ₹200</div>
+                        </p>
+                        <button class="remove">Remove</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="b1">
+                        <img src="book/lion.jpg" alt="">
+                        <p class="explain">
+                            <strong>The Reign of Lion</strong><br>
+                            A story of courage and leadership, showing how one’s strength and wisdom can inspire others to overcome adversity.
+                            <div class="price">Price: ₹200</div>
+                        </p>
+                        <button class="remove">Remove</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="b1">
+                        <img src="book/secret.jpg" alt="">
+                        <p class="explain">
+                            <strong>The Greatest Secret of God</strong><br>
+                            Explores divine wisdom, love, and purpose—guiding readers to connect with faith and inner peace.
+                            <div class="price">Price: ₹200</div>
+                        </p>
+                        <button class="remove">Remove</button>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="checkout">
+                <h3>Total Amount: ₹600</h3>
+                <button>Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

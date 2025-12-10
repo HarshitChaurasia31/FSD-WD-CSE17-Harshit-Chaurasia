@@ -6,16 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(coral, lightcoral);
+        }
+
+        #border {
+            background-color: white;
+            padding: 40px;
+            border: 2px solid black;
+            border-radius: 12px;
+        }
+
         #sex {
             display: flex;
             justify-content: space-between;
-            align-items:   center;
+            align-items: center;
         }
-        .r-s{
+
+        .r-s {
             display: flex;
             align-items: center;
             gap: 8px;
         }
+
         .fn {
             display: flex;
             align-items: center;
@@ -25,68 +43,134 @@
 
         input {
             height: 20px;
+            border: 2px solid rgb(165, 42, 149);
+            border-radius: 7px;
         }
-        .ln{
+
+        .ln {
             display: flex;
             align-items: center;
+        }
+
+        .sub {
+            padding-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20vw;
+        }
+
+        .sub button {
+            border: none;
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .sub button:hover {
+            background-color: purple;
+            transform: scale(1.1);
+            transition: transform ease-in-out 0.2s;
         }
     </style>
 </head>
 
 <body>
-    <div class="fn">
-        <p>First Name:</p>
-        <input type="text" placeholder="First name">
-    </div>
-    <div class="fn ln">
-        <p>Last Name:</p>
-        <input type="text" placeholder="Last name">
-    </div>
-    <div class="fn pass">
-        <p>Password:</p>
-        <input type="password" placeholder="Password">
-    </div>
-    <div class="fn email">
-        <p>Email:</p>
-        <input type="email" placeholder="Email">
-    </div>
-    <div class="fn num">
-        <p>Ph no:</p>
-        <button>🇮🇳+91</button>
-        <input type="number" placeholder="Number">
-    </div>
-    <div class="fn" id="sex">
-        <p>Sex:</p>
-        <div class="r-s">
-            <input type="radio" value="Male" name="male">
-            <label for="male">Male</label>
-            <input type="radio" value="Female" name="female">
-            <label for="female">Female</label>
+    <div id="border">
+        <div class="fn">
+            <p>First Name:</p>
+            <input type="text" placeholder="First name" required class="first-n">
+        </div>
+        <div class="fn ln">
+            <p>Last Name:</p>
+            <input type="text" placeholder="Last name" required class="last-n">
+        </div>
+        <div class="fn pass">
+            <p>Password:</p>
+            <input type="password" placeholder="Password" required class="pass-n">
+        </div>
+        <div class="fn email">
+            <p>Email:</p>
+            <input type="email" placeholder="Email" required class="email-n">
+        </div>
+        <div class="fn num">
+            <p>Ph no:</p>
+            <button>🇮🇳+91</button>
+            <input type="number" placeholder="Number" required class="num-n">
+        </div>
+        <div class="fn" id="sex">
+            <p>Sex:</p>
+            <div class="r-s">
+                <input type="radio" value="Male" name="male">
+                <label for="male">Male</label>
+                <input type="radio" value="Female" name="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div class="fn dob">
+            <p>Date of birth:</p>
+            <input type="date" placeholder="Number">
+        </div>
+        <div class="fn lang">
+            <p>Language:</p>
+            <div class="ln">
+                <input type="checkbox" name="English">
+                <label for="English">English</label>
+                <input type="checkbox" name="Hindi">
+                <label for="Hindi">Hindi</label>
+                <input type="checkbox" name="Tamil">
+                <label for="Tamil">Tamil</label>
+                <input type="checkbox" name="Telugu">
+                <label for="Telugu">Telegu</label>
+                <input type="checkbox" name="Punjabi">
+                <label for="Punjabi">Punjabi</label>
+            </div>
+        </div>
+        <div class="fn add">
+            <p>Address:</p>
+            <input type="text" placeholder="Address">
+        </div>
+        <div class="sub">
+            <button>Submit</button>
         </div>
     </div>
-    <div class="fn dob">
-        <p>Date of birth:</p>
-        <input type="date" placeholder="Number">
-    </div>
-    <div class="fn lang">
-        <p>Language:</p>
-        <div class="ln">
-            <input type="checkbox" name="English">
-            <label for="English">English</label>
-            <input type="checkbox" name="Hindi">
-            <label for="Hindi">Hindi</label>
-            <input type="checkbox" name="Tamil">
-            <label for="Tamil">Tamil</label>
-            <input type="checkbox" name="Telugu">
-            <label for="Telugu">Telegu</label>
-            <input type="checkbox" name="Punjabi">
-            <label for="Punjabi">Punjabi</label>
-        </div>
-    </div>
-    <div class="fn add">
-        <p>Address:</p>
-        <input type="text" placeholder="Address">
-    </div>
+    <script>
+        let fn = document.querySelector(".first-n");
+        let ln = document.querySelector(".last-n");
+        let pass = document.querySelector(".pass-n");
+        let email = document.querySelector(".email-n");
+        let num = document.querySelector(".num-n");
+        document.querySelector(".sub button").addEventListener("click", () => {
+            const namePattern = /^[A-Za-z]{2,}$/;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+            if (!fn.value.match(namePattern)) {
+                alert("Please enter a valid first name (only letters, at least 2 characters).");
+                fn.focus();
+                return;
+            }
+            if (!ln.value.match(namePattern)) {
+                alert("Please enter a valid last name (only letters, at least 2 characters).");
+                ln.focus();
+                return;
+            }
+            if ((pass.value.toString()).length < 6) {
+                alert("Please enter valid password")
+                pass.focus();
+                return;
+            }
+            if (!email.value.match(emailPattern)) {
+                alert("Please enter a valid email address (e.g. name@domain.com).");
+                email.focus();
+                return;
+            }
+            if((num.value.toString()).length >10){
+                 alert("Please enter a valid phone number");
+                num.focus();
+                return;
+            }
+        })
+    </script>
 </body>
 
 </html>
